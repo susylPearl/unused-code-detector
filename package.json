@@ -1,6 +1,6 @@
 {
   "name": "lint-unused",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to find unused variables and functions in JavaScript files.",
   "main": "src/index.js",
   "bin": {
