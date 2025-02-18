@@ -16,12 +16,9 @@ async function checkUnusedCode(filePath) {
 
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8");
-    console.log(fileContent);
     const results = await eslint.lintText(fileContent, { filePath });
-    console.log(results);
 
     results.forEach((result) => {
-      console.log(JSON.stringify(result.messages));
       result.messages.forEach((msg) => {
         if (
           msg.ruleId === "no-unused-vars" ||

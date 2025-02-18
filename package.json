@@ -19,8 +19,6 @@
   "dependencies": {
     "chalk": "^5.4.1",
     "ejs": "^3.1.10",
-    "eslint": "^8.51.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
     "yargs": "^17.7.2"
   },
   "author": "Chiranjhivi Ghimire",
@@ -28,5 +26,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/susylPearl/lint-unused"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-unused-imports": "^2.0.0"
   }
 }
