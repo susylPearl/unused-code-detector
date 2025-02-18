@@ -1,38 +1,23 @@
 #!/usr/bin/env node
 
-// const path = require("path");
-// const chalk = require("chalk");
-// const { processFiles } = require("../src/index");
-// const yargs = require("yargs");
-
 import chalk from "chalk";
 import path from "path";
-import yargs from "yargs";
 import { processFiles } from "../src/index.js";
 
-// Debugging: Log the process start
-console.log(chalk.blueBright("Debug: Script started"));
+const args = process.argv.slice(2);
 
-const argv = yargs().argv;
-//   .usage(chalk.greenBright("Usage: $0 <files|directories>"))
-//   .example(
-//     "$0 src/",
-//     chalk.dim('Analyze all JavaScript files in the "src" directory.')
-//   )
-//   .positional("files", {
-//     describe: "Files or directories to analyze",
-//     type: "string",
-//   })
-//   .help("h")
-//   .alias("h", "help")
-//   .demandCommand(
-//     1,
-//     chalk.red("You need to specify files or directories to check.")
-//   ).argv;
+if (args.length === 0) {
+  console.log(chalk.red("You need to specify files or directories to check."));
+  console.log(chalk.greenBright("Usage: $0 <files|directories>"));
+  process.exit(1);
+}
 
-console.log(chalk.yellowBright("Debug: argv._ =>"), argv._);
+console.log(chalk.yellowBright("Analyzing files or directories:"), args);
 
-const filePaths = argv._.map((file) => path.resolve(file));
+const filePaths = args
+  .filter((arg) => !arg.startsWith("-")) // Filter out flags
+  .map((file) => path.resolve(file));
+console.log(filePaths);
 
 console.log(chalk.blueBright("Starting lint-unused... 🚀"));
 

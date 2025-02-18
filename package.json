@@ -6,9 +6,6 @@
   "bin": {
     "lint-unused": "./bin/cli.js"
   },
-  "scripts": {
-    "lint-unused": "node ./bin/cli.js"
-  },
   "keywords": [
     "eslint",
     "lint",
