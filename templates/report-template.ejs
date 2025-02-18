@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unused Code Report</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        color: #4caf50;
+      }
+      .findings {
+        margin-top: 20px;
+      }
+      .finding {
+        padding: 10px;
+        background-color: #f9f9f9;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Unused Code Report</h1>
+
+    <div class="findings">
+      <% findings.forEach(finding => { %>
+      <div class="finding">
+        <strong>File:</strong> <%= finding.file %><br />
+        <strong>Message:</strong> <%= finding.message %><br />
+        <strong>Line:</strong> <%= finding.line %>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

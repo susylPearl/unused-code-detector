@@ -1,0 +1,35 @@
+{
+  "name": "lint-unused",
+  "version": "1.0.0",
+  "description": "A tool to find unused variables and functions in JavaScript files.",
+  "main": "src/index.js",
+  "bin": {
+    "lint-unused": "./bin/cli.js"
+  },
+  "scripts": {
+    "lint-unused": "node ./bin/cli.js"
+  },
+  "keywords": [
+    "eslint",
+    "lint",
+    "unused",
+    "javascript",
+    "variables",
+    "functions",
+    "clean-code"
+  ],
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "ejs": "^3.1.10",
+    "eslint": "^8.51.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "yargs": "^17.7.2"
+  },
+  "author": "Chiranjhivi Ghimire",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/susylPearl/lint-unused"
+  }
+}
