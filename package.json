@@ -1,10 +1,10 @@
 {
-  "name": "lint-unused",
-  "version": "1.0.1",
+  "name": "unused-code-detector",
+  "version": "1.0.0",
   "description": "A tool to find unused variables and functions in JavaScript files.",
   "main": "src/index.js",
   "bin": {
-    "lint-unused": "./bin/cli.js"
+    "unused-code-detector": "./bin/cli.js"
   },
   "keywords": [
     "eslint",
@@ -25,8 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/susylPearl/lint-unused"
+    "url": "https://github.com/susylPearl/unused-code-detector"
   },
+  "bugs": {
+    "url": "https://github.com/susylPearl/unused-code-detector/issues"
+  },
+  "homepage": "https://github.com/susylPearl/unused-code-detector#readme",
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.4",
